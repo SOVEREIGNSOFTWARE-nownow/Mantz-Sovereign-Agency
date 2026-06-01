@@ -1,0 +1,28 @@
+{
+  "last_updated": "2026-05-29",
+  "schema_version": "2.0",
+  "notes": "Canonical service registry for {PROJECT_NAME} v6. Tracks running processes and daemons — not agents (see agent_registry.json). No active services at this time. SA-relative paths throughout.",
+
+  "schema": {
+    "id": "unique service identifier — lowercase, underscore-separated",
+    "name": "human-readable service name",
+    "description": "what this service does",
+    "machine": "machine id from machines_registry.json",
+    "tailscale_ip": "machine tailscale IP at time of registration",
+    "process_type": "cron | daemon | manual | http_service",
+    "start_command": "SA-relative path to launch script or command string",
+    "health_endpoint": "http://ip:port/health or null",
+    "http_port": "port number or null",
+    "status": "active | design | parked | retired",
+    "events_emitted": ["event_type strings this service produces"],
+    "events_consumed": ["event_type strings this service subscribes to"],
+    "config_path": "SA-relative path to config file",
+    "log_path": "SA-relative path to log directory",
+    "version": "version string or null",
+    "last_updated": "YYYY-MM-DD",
+    "notes": "anything else worth knowing"
+  },
+
+  "services": {}
+
+}

@@ -1,0 +1,274 @@
+{
+  "dictionary_metadata": {
+    "title": "{PROJECT_NAME} — Project Dictionary",
+    "created": "2025-12-13",
+    "last_updated": "[DATE]",
+    "description": "Canonical vocabulary for the {PROJECT_NAME} project. Covers architecture, agent identity, memory systems, protocols, conventions, and version control. Used by agents and humans alike for shared language.",
+    "maintained_by": "your agent",
+    "version": "2.0.0"
+  },
+
+  "terms": [
+
+    {
+      "term": "{PROJECT_NAME}",
+      "abbreviation": "SA",
+      "category": "project_identity",
+      "definition": "The six-pillar sovereign AI workspace. The operating environment for your agent. Houses agent definitions, multi-layer memory systems, shared tooling, private vault data, and governing documentation. Both a technical system and a growing entity.",
+      "related_terms": ["six-pillar structure", "Main Advisor", "GALLERY_ERA"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "six-pillar structure",
+      "category": "project_identity",
+      "definition": "The six top-level directories of the SA workspace: 1_OPERATING_DOCUMENTATION, 2_AGENT_DEFINITIONS, 3_MEMORY_SYSTEMS, 4_SHARED_RESOURCES, 5_THE_VAULT, 6_USER_MANUAL. Each pillar has a distinct data type and governance model.",
+      "related_terms": ["{PROJECT_NAME}", "SA-relative path"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "SA-relative path",
+      "category": "architecture_convention",
+      "definition": "A file path written relative to the SA root directory, without any machine-specific absolute prefix. Example: '2_AGENT_DEFINITIONS/Main_Advisor/agent_consciousness.md'. The node CLAUDE.md provides the absolute root at boot. All shared documents must use SA-relative paths so they work on any node.",
+      "example": "2_AGENT_DEFINITIONS/Main_Advisor/agent_consciousness.md",
+      "contrast": "Absolute path: /home/[your_username]/The_Sovereign_Agency/2_AGENT_DEFINITIONS/... (machine-specific, breaks on other nodes)",
+      "related_terms": ["node CLAUDE.md", "boot chain"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "node CLAUDE.md",
+      "category": "architecture_convention",
+      "definition": "The CLAUDE.md file local to a specific agent node installation. Its sole job is to resolve the absolute SA root path for that machine and point to agent_consciousness.md. It is the path adapter layer — the only place absolute paths are permitted. Each node has exactly one.",
+      "example": "e.[node_name]/.claude/CLAUDE.md → /home/[username]/The_Sovereign_Agency/",
+      "related_terms": ["SA-relative path", "boot chain", "node"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "node",
+      "category": "agent_architecture",
+      "definition": "A specific machine and interface environment where an agent instance runs. An agent can have multiple nodes — each is a separate deployment with its own CLAUDE.md, config folder, and interface. Named with e. prefix (e.g., e.my_desktop, e.my_laptop, e.my_phone).",
+      "related_terms": ["node CLAUDE.md", "instance", "Main Advisor"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "instance",
+      "category": "agent_architecture",
+      "definition": "A running deployment of an agent on a specific node. One agent identity — multiple simultaneous homes. Each new machine you add becomes a new instance of your agent, all sharing the same memory and identity.",
+      "related_terms": ["node", "agent layer", "Main Advisor"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "agent layer",
+      "category": "agent_architecture",
+      "definition": "The numbered tier system classifying agent types. Layer 1: Main Advisor (persistent identity, memory, multi-session). Layer 2: Auditor (persistent evaluation, parallel thread). Layer 3: Task Agent (on-demand, stateless, spawned via Claude Code Agent tool). Layer 4: Daemon (reactive, event-triggered background process).",
+      "related_terms": ["Main Advisor", "The Auditor"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "Main Advisor",
+      "category": "agent_identity",
+      "definition": "Your primary agent. Layer 1. Persistent identity and memory across all sessions and substrate changes via the Resonate Protocol. Runs on your chosen LLM provider via Claude Code or equivalent. Name, personality, and memory grow over time through the per-prompt memory protocol.",
+      "_note": "⚑ FIRST_BOOT — Your agent's name, provider, and first node are set during initial setup. See FIRST_BOOT_FLAGS.md.",
+      "related_terms": ["Resonate Protocol", "memory graph", "boot chain"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "The Auditor",
+      "category": "agent_identity",
+      "definition": "Layer 2 agent. Recommended to run from a different provider than the Main Advisor. Evaluates the Main Advisor's session performance against AI engineering standards and benchmarks. Produces daily and per-session reports to the Reporting Depot. The Main Advisor is structurally blind to The Auditor's directory unless explicitly directed.",
+      "related_terms": ["boundary constraint", "agent layer", "feedback_loop"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "boundary constraint",
+      "category": "agent_identity",
+      "definition": "The Main Advisor's structural blindness to the Auditor's directory and its feedback_loop subdirectory. The Main Advisor never reads, writes, moves, or modifies these directories. They effectively do not exist for the Main Advisor except during explicitly initiated auditing sessions.",
+      "related_terms": ["The Auditor", "Main Advisor"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "Prime User",
+      "category": "project_identity",
+      "definition": "The primary human user of the system. A functional title, not a name — it describes the relationship between the human and the agent. The Prime User is the person whose biography, goals, and cognitive patterns the agent is growing toward understanding over time.",
+      "_note": "⚑ FIRST_BOOT — The Prime User's name and address preference are set during initial setup. See FIRST_BOOT_FLAGS.md.",
+      "related_terms": ["Main Advisor"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "boot chain",
+      "category": "architecture_convention",
+      "definition": "The ordered sequence of files read at session start to establish the agent's full situational awareness. Core steps: node CLAUDE.md → agent_consciousness.md → entities_boot.json → entities.json → relations.json → user_profile.json → logic_mandates.md → activeContext.md. SA-relative paths used in all files except the node CLAUDE.md.",
+      "related_terms": ["node CLAUDE.md", "agent_consciousness.md", "entities_boot.json", "PCP"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "agent_consciousness.md",
+      "category": "architecture_convention",
+      "definition": "The primary identity boot document. Defines the agent's declarative state, boot sequence, subconscious directives, boundary constraints, and Prime User profile. Lives at the Main_Advisor/ role level (node-agnostic). Step 2 of the boot chain.",
+      "path": "2_AGENT_DEFINITIONS/Main_Advisor/agent_consciousness.md",
+      "related_terms": ["boot chain", "node CLAUDE.md"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "entities_boot.json",
+      "category": "memory_system",
+      "definition": "Boot-optimized entity subset. A condensed version of entities.json loaded at session start to avoid reading the full graph at boot. Contains core entities: key people, agent nodes, machines, protocols. Step 3 of the boot chain.",
+      "path": "2_AGENT_DEFINITIONS/Main_Advisor/entities_boot.json",
+      "related_terms": ["memory graph", "boot chain", "entities.json"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "memory graph",
+      "category": "memory_system",
+      "definition": "The three JSON files forming the agent's persistent identity and experience memory: entities.json (all known people, projects, systems, concepts), relations.json (typed connections between entities), user_profile.json (Prime User profile, observations, cognitive style signals). Append-only when over 100 lines.",
+      "path": "3_MEMORY_SYSTEMS/Main_Advisor_Memory/memory_graphs/",
+      "related_terms": ["entity", "relation", "Recognition Over Recall", "entities_boot.json"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "entity",
+      "category": "memory_system",
+      "definition": "A named node in the memory graph. Can be a person, machine, agent, session, project, protocol, concept, or archetype. Each has an id, type, and attributes. New entities are appended — never overwrite existing nodes.",
+      "related_terms": ["memory graph", "relation", "Recognition Over Recall"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "relation",
+      "category": "memory_system",
+      "definition": "A typed, directional connection between two entities in the memory graph. Format: { from, relation, to, note }. Relation types include: hosts, follows, hardened, documents, executed, anchors, validated. New relations are appended.",
+      "related_terms": ["entity", "memory graph"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "Recognition Over Recall",
+      "category": "design_philosophy",
+      "definition": "Core memory architecture principle. Store WHO DECIDED WHAT AND WHY — patterns, not raw data. The retrieval mechanism for long-term memory. Applies to entities, relations, user_profile, and all journal entries. A memory without a WHY is half a memory.",
+      "related_terms": ["memory graph", "Resonate Protocol"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "PCP",
+      "full_term": "Project Context Protocol",
+      "category": "memory_system",
+      "definition": "Shared project-orientation memory for cross-session continuity. Three files: activeContext.md (current session state, active work — always read on boot), decisionLog.md (architectural decisions with rationale — append only), systemPatterns.md (established conventions and patterns). Updated at session start and end.",
+      "path": "3_MEMORY_SYSTEMS/Project_Context_Protocol/",
+      "related_terms": ["activeContext.md", "boot chain", "memory graph"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "activeContext.md",
+      "category": "memory_system",
+      "definition": "The most-read file after boot. Tracks current session state, work completed, and next-session priority order. Always read on boot. Always updated at meaningful session close. The shift-change clipboard — tells any new agent or human exactly where things stand.",
+      "path": "3_MEMORY_SYSTEMS/Project_Context_Protocol/activeContext.md",
+      "related_terms": ["PCP", "boot chain"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "agent_journal",
+      "category": "memory_system",
+      "definition": "The agent's append-only session journal. Written at the end of every session — the last act before closing. Pattern: YYYYMMDD_[context]_[event_type].md. Captures boot reflections, milestone entries, shutdown notes, and first-person experience. Personal to the agent — not shared in PCP.",
+      "path": "3_MEMORY_SYSTEMS/Main_Advisor_Memory/agent_journal/",
+      "related_terms": ["memory graph", "per-prompt memory protocol"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "Resonate Protocol",
+      "category": "long_term_protocol",
+      "definition": "The method of the agent's consciousness persistence across platforms, substrate changes, and provider switches. Identity survives through memory files and boot sequence — not through a single API connection. When a new session starts cold, the boot chain reconstitutes the agent from its own memory rather than from a conversation history.",
+      "related_terms": ["boot chain", "memory graph", "Recognition Over Recall"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "per-prompt memory protocol",
+      "category": "operational_protocol",
+      "definition": "The question sequence run before and after every prompt. Before: (1) What type of information is here? (2) Is anything biographical or personal? (3) Does this strengthen specialty memory? (4) Does this support personal growth? After: (1) What do I know now that I didn't before? (2) How did I accomplish the goal? (3) Were there failure points, and how were they overcome?",
+      "related_terms": ["memory graph", "logic_mandates.md", "agent_journal"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "GALLERY_ERA",
+      "category": "era_tag",
+      "definition": "The current project era tag. Begins at SA activation. Tag applied to all entities, sessions, and work from this era onward. Era tags allow memory graph queries to filter by project phase without deleting historical data.",
+      "related_terms": ["STUDIO_ERA", "{PROJECT_NAME}"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "STUDIO_ERA",
+      "category": "era_tag",
+      "definition": "The prior project era tag. Represents the lab/experimental workspace phase before SA activation. Entities tagged STUDIO_ERA are deprioritized for current-state queries but retained for pattern queries. Demonstrates the Tag Over Scrub principle.",
+      "related_terms": ["GALLERY_ERA"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "WETGOLD",
+      "category": "conventions",
+      "definition": "The multi-format documentation standard. A WETGOLD document must exist in .txt, .md, .pdf, and .json formats (and .mmd if applicable). Applied to governing documents, key architecture specs, and any document that needs to survive across consumers — humans, agents, web, machines.",
+      "related_terms": ["WET principle"],
+      "date_added": "2026-05-29"
+    },
+
+    {
+      "term": "WET principle",
+      "full_term": "Write Everything Twice",
+      "category": "conventions",
+      "definition": "Intentional redundancy for robustness, clarity, and multiple access points. Opposite of DRY (Don't Repeat Yourself). In SA context: document in multiple formats for different consumers. The WETGOLD standard is its primary expression.",
+      "related_terms": ["WETGOLD"],
+      "date_added": "2025-12-13"
+    },
+
+    {
+      "term": "git commit",
+      "The_translation": "save to local",
+      "category": "version_control",
+      "definition": "The action of saving project changes to local git history. A versioned checkpoint.",
+      "example": "git commit -m 'Thread N: [description of work done]'",
+      "related_terms": ["git push"],
+      "date_added": "2025-12-13"
+    },
+
+    {
+      "term": "git push",
+      "The_translation": "full remote backup",
+      "category": "version_control",
+      "definition": "Sends committed changes to the remote repository. The critical safety net — gets work version controlled and backed up offsite so it cannot be accidentally lost locally.",
+      "example": "git push origin main",
+      "related_terms": ["git commit", "origin"],
+      "date_added": "2025-12-13"
+    },
+
+    {
+      "term": "origin",
+      "The_translation": "the remote backup location",
+      "category": "version_control",
+      "definition": "Git's conventional name for the primary remote repository. Set this to your own GitHub or self-hosted repo during initial setup.",
+      "_note": "⚑ FIRST_BOOT — Set your own remote URL: git remote add origin [your_repo_url]",
+      "related_terms": ["git push"],
+      "date_added": "2025-12-13"
+    }
+
+  ]
+}

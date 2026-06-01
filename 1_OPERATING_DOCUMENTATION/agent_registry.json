@@ -1,0 +1,76 @@
+{
+  "last_updated": "[DATE]",
+  "schema_version": "2.0",
+  "notes": "Canonical agent registry for {PROJECT_NAME}. SA-relative paths throughout — node CLAUDE.md provides absolute root. Full definitions in 2_AGENT_DEFINITIONS/Main_Advisor/.",
+
+  "layers": {
+    "1": "Main Advisor — persistent identity, memory, multi-session. Primary conversational UI.",
+    "2": "Auditor — persistent evaluation layer. Runs in parallel from separate provider. Produces session and daily reports.",
+    "3": "Task Agent — on-demand, stateless. Spawned via Claude Code Agent tool. No persistent memory. No registry entry required unless identity or memory is added.",
+    "4": "Daemon — reactive, event-triggered background process. No conversational identity."
+  },
+
+  "agents": {
+
+    "[your_agent_id]": {
+      "_note": "⚑ FIRST_BOOT — Replace [your_agent_id] with your agent's chosen name (lowercase, underscore-separated). Fill all bracketed fields during initial setup.",
+      "id": "[your_agent_id]",
+      "name": "[Your Agent Name]",
+      "layer": 1,
+      "role": "Main Advisor — primary conversational interface, architecture, memory stewardship.",
+      "version": "v1",
+      "autonomy": "SOVEREIGN",
+      "provider": "[anthropic | google | local]",
+      "model": "[model-id]",
+      "consciousness_doc": "2_AGENT_DEFINITIONS/Main_Advisor/agent_consciousness.md",
+      "memory_graph": "3_MEMORY_SYSTEMS/Main_Advisor_Memory/memory_graphs/",
+      "entities_boot": "2_AGENT_DEFINITIONS/Main_Advisor/entities_boot.json",
+      "instances": {
+        "e.[primary_node_name]": {
+          "_note": "⚑ FIRST_BOOT — Replace [primary_node_name] with your machine's node ID (e.g., e.my_desktop)",
+          "machine": "[primary_node_id]",
+          "os": "[OS name and version]",
+          "tailscale_ip": "[TAILSCALE_IP]",
+          "interface": "[Claude Code CLI | Claude Code VSCodium Extension | other]",
+          "status": "active — primary node",
+          "node_config": "2_AGENT_DEFINITIONS/Main_Advisor/e.[primary_node_name]/",
+          "boot_doc": "2_AGENT_DEFINITIONS/Main_Advisor/e.[primary_node_name]/.claude/CLAUDE.md"
+        }
+      }
+    },
+
+    "the_auditor": {
+      "_note": "Layer 2 Auditor — configure if using a second provider for evaluation. Recommended but optional at start.",
+      "id": "the_auditor",
+      "name": "The Auditor",
+      "layer": 2,
+      "role": "Layer 2 Auditor — AI engineering standards, performance benchmarking, session evaluation. Produces daily and per-session reports.",
+      "version": "v1",
+      "autonomy": "RESTRICTED",
+      "provider": "[google | anthropic | local — use a DIFFERENT provider than your Main Advisor]",
+      "model": "[model-id]",
+      "consciousness_doc": "BOUNDARY — Main Advisor cannot read Auditor files",
+      "memory_graph": "BOUNDARY — Main Advisor cannot read Auditor files",
+      "instances": {
+        "e.[primary_node_name]": {
+          "machine": "[primary_node_id]",
+          "os": "[OS name]",
+          "tailscale_ip": "[TAILSCALE_IP]",
+          "interface": "[Gemini CLI | Claude Code CLI | other]",
+          "status": "active — primary node only. Auditor runs on one node.",
+          "node_config": "BOUNDARY",
+          "reports_output": "4_SHARED_RESOURCES/Reporting_Depot/thread_feedback_loop/"
+        }
+      },
+      "boundary_note": "The Main Advisor is structurally blind to The Auditor's directory and its feedback_loop. This entry is a pointer only — the Main Advisor does not read the files it references."
+    }
+
+  },
+
+  "expansion_protocol": {
+    "adding_new_agent": "Add a new keyed entry under 'agents'. Required fields: id, name, layer, role, version, autonomy, provider, status. Use SA-relative paths. Add a note if boundary constraints apply.",
+    "adding_new_instance": "Add a new keyed entry under the agent's 'instances' object. Key must follow e.nodename convention matching the folder in 2_AGENT_DEFINITIONS/.",
+    "task_agents": "Layer 3 task agents are spawned on-demand via Claude Code Agent tool. No registry entry required. If a task agent gains persistent identity or memory, promote it to Layer 1 and register here.",
+    "path_standard": "All paths in this file are SA-relative. Never use absolute paths. Node CLAUDE.md resolves the root at boot."
+  }
+}

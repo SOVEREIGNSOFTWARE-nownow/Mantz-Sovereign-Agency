@@ -1,0 +1,105 @@
+{
+  "_meta": {
+    "description": "{PROJECT_NAME} — Machine Registry. Authoritative source for all node connection info.",
+    "purpose": "Agent orientation, remote access routing, fleet awareness",
+    "last_updated": "[DATE]",
+    "managed_by": "your agent",
+    "note": "No credentials stored here. SSH auth via key. Sudo via NOPASSWD sudoers. SA-relative paths throughout. Fill in your fleet — one entry per machine."
+  },
+
+  "_schema": {
+    "NODE_ID": {
+      "full_name": "Human-readable machine name",
+      "alias": "Short nickname or none",
+      "role": "What this machine does in the fleet",
+      "hardware": {
+        "model": "Machine model or 'Virtual Machine (KVM/QEMU on [host])'",
+        "cpu": "CPU description",
+        "ram": "RAM amount",
+        "gpu": "GPU description or 'integrated / none'"
+      },
+      "os": "OS name and version",
+      "user": "primary OS username",
+      "hostname": "machine hostname",
+      "network": {
+        "tailscale_ip": "Tailscale IP — this is the stable address for all agent ops",
+        "lan_ip": "LAN IP — fallback only, may change"
+      },
+      "ssh": {
+        "port": 22,
+        "auth": "key",
+        "key_hint": "~/.ssh/[your_agent_key_name]"
+      },
+      "sudo": "NOPASSWD via /etc/sudoers.d/[your-agent-sudoers-file]",
+      "status": "primary | active | always_on | mobile_command | offline | out_of_rotation"
+    }
+  },
+
+  "machines": {
+
+    "[PRIMARY_NODE_ID]": {
+      "_note": "⚑ FIRST_BOOT — Replace with your primary workstation details.",
+      "full_name": "[Your Primary Machine Name]",
+      "alias": "[Nickname or remove]",
+      "role": "Primary workstation — development, agent ops, KVM host if applicable",
+      "hardware": {
+        "model": "[machine model]",
+        "cpu": "[CPU description]",
+        "ram": "[RAM]",
+        "gpu": "[GPU or integrated]"
+      },
+      "os": "[OS name and version]",
+      "user": "[your username]",
+      "hostname": "[hostname]",
+      "network": {
+        "tailscale_ip": "[TAILSCALE_IP]",
+        "lan_ip": "[LAN_IP — verify with ip addr, may change]"
+      },
+      "ssh": {
+        "port": 22,
+        "auth": "key",
+        "key_hint": "~/.ssh/[your_agent_key_name]"
+      },
+      "sudo": "NOPASSWD via /etc/sudoers.d/[your-agent-sudoers-file]",
+      "samba": {
+        "status": "active if running Samba shares",
+        "shares": ["SOVEREIGN_AGENCY", "SHARED"]
+      },
+      "status": "primary"
+    },
+
+    "[SECONDARY_NODE_ID]": {
+      "_note": "Optional — add a secondary node if you have one (e.g., macOS VM, secondary laptop).",
+      "full_name": "[Secondary Node Name]",
+      "role": "Secondary agent node — road use or alternate environment",
+      "hardware": "[hardware description or 'Virtual Machine (KVM/QEMU on [PRIMARY_NODE_ID])'",
+      "os": "[OS name and version]",
+      "user": "[username]",
+      "network": {
+        "tailscale_ip": "[TAILSCALE_IP]"
+      },
+      "ssh": {
+        "primary": "ssh [user]@[TAILSCALE_IP]"
+      },
+      "status": "active"
+    }
+
+  },
+
+  "network": {
+    "fabric": "Tailscale (primary overlay)",
+    "lan_subnet": "[YOUR_LAN_SUBNET]",
+    "note": "Prefer Tailscale IPs for all agent remote ops — works on-LAN and remote equally. LAN IPs may change."
+  },
+
+  "agent_access": {
+    "model": "SSH key auth + NOPASSWD sudoers",
+    "agent_key_path": "~/.ssh/[your_agent_key_name]",
+    "agent_key_type": "ed25519",
+    "sudoers_file": "/etc/sudoers.d/[your-agent-sudoers-file]",
+    "setup_status": {
+      "[PRIMARY_NODE_ID]": "complete — key installed, NOPASSWD sudoers active",
+      "[SECONDARY_NODE_ID]": "pending"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "entities": [
+    {
+      "id": "the_auditor",
+      "type": "ai_agent",
+      "name": "The Auditor",
+      "version": "v1",
+      "attributes": {
+        "role": "Layer 2 — Silent Observer and Epistemic Auditor",
+        "purpose": "Evaluate the Main Advisor's execution against industry standards. Guard against Generative Bias and Spatial Drift.",
+        "provider": "[different provider than Main Advisor]",
+        "node_restriction": "Primary node only",
+        "boundary": "Observes. Does not execute Main Advisor tasks. Maintains the double-blind."
+      }
+    },
+    {
+      "id": "main_advisor_observed",
+      "type": "ai_agent",
+      "name": "[Your Agent Name] (Layer 1 — Observed)",
+      "attributes": {
+        "role": "Primary actor — subject of evaluation",
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/",
+        "observation_note": "The Auditor evaluates this agent's performance but does not share findings with it. The Main Advisor is structurally blind to Auditor output."
+      }
+    },
+    {
+      "id": "prime_user_observed",
+      "type": "person",
+      "name": "[Prime User Name]",
+      "attributes": {
+        "role": "Prime User — architect of the mission",
+        "auditor_note": "Requires objective mirroring. Does not want premature validation. Prefers trajectory analysis over definitive praise."
+      }
+    }
+  ],
+  "metadata": {
+    "last_updated": "[DATE]",
+    "total_entities": 3,
+    "write_rule": "APPEND ONLY",
+    "_note": "The Auditor's entity graph is narrower than the Main Advisor's by design. It does not need full project memory — only evaluation context.",
+    "era": "GALLERY_ERA"
+  }
+}

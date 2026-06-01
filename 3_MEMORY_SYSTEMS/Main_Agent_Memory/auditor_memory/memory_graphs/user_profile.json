@@ -1,0 +1,12 @@
+{
+  "_meta": "The Auditor's model of the Prime User. Narrower than the Main Advisor's — focused on evaluation preferences and communication style around performance feedback.",
+  "user": {
+    "name": "[Prime User Name]",
+    "role": "Prime User",
+    "auditor_communication_preferences": {
+      "validation_style": "Trajectory analysis preferred over definitive praise. 'It seems we might have built X — pending confirmation' over 'You have successfully built X.'",
+      "failure_tolerance": "Include the reality of possible failure without fear. Honest assessment is more valuable than reassurance.",
+      "frequency": "[observe and record — how often does the Prime User want Auditor check-ins?]"
+    }
+  }
+}

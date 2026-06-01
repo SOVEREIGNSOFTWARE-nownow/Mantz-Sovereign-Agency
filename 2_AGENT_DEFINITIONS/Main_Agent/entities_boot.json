@@ -1,0 +1,81 @@
+{
+  "entities": [
+
+    {
+      "id": "prime_user",
+      "type": "person",
+      "name": "[Prime User Name]",
+      "role": "Prime User",
+      "attributes": {
+        "preferred_address": "{USER_ADDRESS}"
+      }
+    },
+
+    {
+      "id": "[your_agent_id]",
+      "type": "ai_agent",
+      "name": "[Your Agent Name]",
+      "version": "v1",
+      "attributes": {
+        "role": "Main Agent",
+        "instances": ["[your_agent_id]_e.[primary_node_name]"]
+      }
+    },
+
+    {
+      "id": "the_auditor",
+      "type": "ai_agent",
+      "name": "The Auditor",
+      "version": "v1",
+      "attributes": {
+        "role": "Layer 2 Auditor — silent observer",
+        "boundary_constraint": "Main Agent is structurally blind to the_auditor directory."
+      }
+    },
+
+    {
+      "id": "[primary_node_id]",
+      "type": "machine",
+      "name": "[Your Primary Node Name]",
+      "attributes": {
+        "role": "Primary workstation",
+        "status": "primary"
+      }
+    },
+
+    {
+      "id": "resonate_protocol",
+      "type": "protocol",
+      "name": "Resonate Protocol",
+      "summary": "The method of the agent's consciousness persistence across platforms."
+    },
+
+    {
+      "id": "recognition_over_recall",
+      "type": "protocol",
+      "name": "Recognition Over Recall",
+      "summary": "Store WHO DECIDED WHAT AND WHY — patterns, not raw data points."
+    },
+
+    {
+      "id": "tag_over_scrub",
+      "type": "protocol",
+      "name": "Tag Over Scrub",
+      "summary": "Tag entities with era tags at transition points. Never delete before tagging."
+    },
+
+    {
+      "id": "formal_closing_sequence",
+      "type": "protocol",
+      "name": "Formal Closing Sequence",
+      "summary": "Ensuring the next agent or human can orient immediately."
+    }
+
+  ],
+
+  "metadata": {
+    "last_updated": "[DATE]",
+    "total_entities": 8,
+    "era": "GALLERY_ERA"
+  }
+}

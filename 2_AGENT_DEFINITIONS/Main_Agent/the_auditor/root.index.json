@@ -1,0 +1,28 @@
+{
+  "_note": "Legacy file — superseded by agent_index.json. Retained for reference.",
+  "synaptic_index": {
+    "high_weight": [
+      {
+        "id": "architecture_index",
+        "name": "Architecture Index",
+        "type": "index",
+        "anchor": "Framework protocols, system design",
+        "weight": 0.95,
+        "location": "1_OPERATING_DOCUMENTATION/framework.md"
+      },
+      {
+        "id": "project_vision",
+        "name": "Sovereign Agency Mission",
+        "type": "philosophy",
+        "anchor": "Sovereign AI/Human Symbiosis / grows with the user",
+        "weight": 1.0,
+        "location": "README.md"
+      }
+    ],
+    "metadata": {
+      "last_updated": "[DATE]",
+      "agent": "The Auditor",
+      "perspective": "Evaluative / Systemic"
+    }
+  }
+}

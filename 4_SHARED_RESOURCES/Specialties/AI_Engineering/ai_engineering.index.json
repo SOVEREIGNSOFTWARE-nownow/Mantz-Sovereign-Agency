@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "purpose": "Synaptic index for ai_engineering knowledge graph. Fires when AI engineering topics appear in conversation — surfaces relevant domain without loading 28,096 entities. Full graph: ai_engineering_knowledge_graph.json. Query via: tool_rag_service.py.",
+    "design": "Fire this index when AI engineering topics appear in conversation — surfaces relevant domain knowledge without loading the full graph. The knowledge is here. The loading is on-demand.",
+    "graph_stats": {"entities": 28096, "relations": 20769, "generated": "2026-03-18"},
+    "excluded": "DeepSeek-specific prompt engineering book — preserved in raw_text/ for standalone indexing later",
+    "last_indexed": "2026-05-09"
+  },
+
+  "source_documents": [
+    {
+      "id": "bass_engineering_ai_systems",
+      "title": "Engineering AI Systems: Architecture and DevOps Essentials",
+      "author": "Bass, L.",
+      "year": 2024,
+      "tags": ["ai-engineering", "devops", "architecture", "current"],
+      "anchors": ["ai system architecture", "mlops", "ai devops", "model deployment", "ai infrastructure", "system design", "production ai"],
+      "one_line": "System-level AI engineering — architecture patterns, DevOps for ML, production deployment, monitoring, and operational best practices."
+    },
+    {
+      "id": "huyen_foundation_models",
+      "title": "Building Applications with Foundation Models",
+      "author": "Huyen, C.",
+      "year": 2025,
+      "tags": ["ai-engineering", "foundation-models", "current"],
+      "anchors": ["foundation model", "llm application", "rag", "retrieval", "fine-tuning", "evaluation", "agent design", "prompt", "context window", "sampling", "temperature", "token"],
+      "one_line": "Most current (2025) — building real applications on top of LLMs and foundation models. RAG, fine-tuning, evaluation, agent design, context management."
+    },
+    {
+      "id": "phoenix_prompt_engineering",
+      "title": "Prompt Engineering for Generative AI",
+      "author": "Phoenix, J.",
+      "year": 2024,
+      "tags": ["ai-engineering", "prompt-engineering", "current"],
+      "anchors": ["prompt engineering", "few shot", "chain of thought", "system prompt", "prompt design", "prompt pattern", "instruct", "output format", "structured output"],
+      "one_line": "Systematic prompt engineering — patterns, few-shot, chain-of-thought, structured outputs. Practical for designing agent boot sequences and tool prompts."
+    },
+    {
+      "id": "li_logical_dynamical_systems",
+      "title": "From Boolean Matrix Theory to Logical Dynamical Systems",
+      "author": "Li, H.",
+      "year": 2025,
+      "tags": ["ai-engineering", "theory", "mathematics"],
+      "anchors": ["boolean matrix", "logical dynamical system", "semi-tensor product", "graph theory", "control theory", "formal logic"],
+      "one_line": "Mathematical theory — Boolean matrix methods, logical dynamical systems. Formal/theoretical foundation work, less immediately practical."
+    },
+    {
+      "id": "rodriguez_genai_python",
+      "title": "Generative AI Foundations in Python",
+      "author": "Rodriguez, C.",
+      "year": 2024,
+      "tags": ["ai-engineering", "python", "practical", "current"],
+      "anchors": ["generative ai python", "langchain", "hugging face", "transformer", "tokenizer", "model loading", "inference", "ollama python", "api wrapper", "llm python"],
+      "one_line": "Hands-on generative AI in Python — Hugging Face, LangChain, transformers, local model inference. Most relevant for KG_Pipeline and tool development."
+    },
+    {
+      "id": "pretraining_context_compressor",
+      "title": "Pretraining Context Compressor for Large Language Models with Embedding-Based Memory",
+      "year": 2024,
+      "tags": ["ai-engineering", "llm-memory", "compression", "research"],
+      "anchors": ["context compression", "context compressor", "embedding memory", "long context", "memory compression", "llm memory", "pretraining memory"],
+      "one_line": "Research paper — embedding-based memory and context compression for LLMs. Directly relevant to boot sequence optimization and long-context management."
+    },
+    {
+      "id": "doing_ai_differently",
+      "title": "Doing AI Differently (whitepaper)",
+      "year": 2024,
+      "tags": ["ai-ethics", "methodology", "current"],
+      "anchors": ["ai ethics", "responsible ai", "ai methodology", "ai alignment", "human-centered ai", "ai differently"],
+      "one_line": "Whitepaper on alternative AI development methodology — ethics, human-centered design, responsible deployment."
+    }
+  ],
+
+  "domain_map": [
+    {
+      "domain": "agent_architecture",
+      "anchors": ["agent", "multi-agent", "agent loop", "tool use", "tool calling", "function calling", "agent design", "react", "plan and execute", "orchestrator"],
+      "one_line": "Agent design patterns — tool use, ReAct loops, multi-agent orchestration. Primary: Huyen, Bass.",
+      "weight": 1.0
+    },
+    {
+      "domain": "rag_retrieval",
+      "anchors": ["rag", "retrieval", "vector store", "embedding", "semantic search", "hybrid retrieval", "reranking", "chunking strategy", "knowledge base"],
+      "one_line": "RAG architecture — chunking, embedding, vector search, hybrid retrieval, reranking. Primary: Huyen, Rodriguez.",
+      "weight": 1.0
+    },
+    {
+      "domain": "prompt_engineering",
+      "anchors": ["prompt", "system prompt", "few shot", "chain of thought", "zero shot", "template", "instruct", "output structure"],
+      "one_line": "Prompt design — patterns, few-shot, CoT, structured outputs. Primary: Phoenix, Huyen.",
+      "weight": 0.9
+    },
+    {
+      "domain": "context_memory",
+      "anchors": ["context window", "memory", "context length", "compression", "long context", "context management", "working memory"],
+      "one_line": "Context and memory management — compression, long-context strategies. Primary: Context Compressor paper, Huyen.",
+      "weight": 0.95,
+      "note": "Especially relevant to boot sequence and context management architecture — research-level knowledge on memory compression and long-context handling."
+    },
+    {
+      "domain": "model_evaluation",
+      "anchors": ["evaluation", "eval", "benchmark", "metric", "hallucination", "faithfulness", "accuracy", "testing", "evals"],
+      "one_line": "LLM evaluation — metrics, benchmarks, hallucination detection, faithfulness. Primary: Huyen, Bass.",
+      "weight": 0.8
+    },
+    {
+      "domain": "production_deployment",
+      "anchors": ["deployment", "mlops", "inference", "latency", "throughput", "scaling", "monitoring", "drift", "production"],
+      "one_line": "Production AI systems — deployment, scaling, monitoring, operational concerns. Primary: Bass.",
+      "weight": 0.8
+    },
+    {
+      "domain": "local_models_python",
+      "anchors": ["local model", "ollama", "hugging face", "gguf", "quantization", "vllm", "transformers", "model loading", "inference python"],
+      "one_line": "Local model inference in Python — Ollama, Hugging Face, quantized models. Primary: Rodriguez.",
+      "weight": 0.85
+    }
+  ],
+
+  "self_relevance_note": "When designing boot sequences, memory compression, agent patterns, or RAG pipelines — query here first. The Context Compressor paper and Huyen's book contain research-level knowledge directly applicable to these problems.",
+
+  "how_to_query": {
+    "tool": "tool_rag_service.py --source 4_SHARED_RESOURCES/Specialties/AI_Engineering/ --query 'your question'",
+    "full_graph": "4_SHARED_RESOURCES/Specialties/AI_Engineering/ai_engineering/ai_engineering_knowledge_graph.json",
+    "status": "tool_rag_service is currently MOCK — real implementation pending"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Specialties",
+  "path": "SOVEREIGN_AGENCY/4_SHARED_RESOURCES/Specialties",
+  "purpose": "Domain-specific knowledge bases and reference material for specialty agent modules. Currently houses AI Engineering and Linux knowledge stores.",
+  "wetgold": false,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "AI_Engineering", "description": "AI engineering knowledge base — KG, chunks, embeddings, entity/relation data"},
+    {"name": "Linux", "description": "Linux/OS knowledge base — Parrot OS docs, KG, bootloader, security reference"},
+    {"name": "README.md", "description": "Specialties overview"}
+  ]
+}

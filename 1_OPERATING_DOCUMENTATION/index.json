@@ -1,0 +1,20 @@
+{
+  "folder": "1_OPERATING_DOCUMENTATION",
+  "path": "SOVEREIGN_AGENCY/1_OPERATING_DOCUMENTATION",
+  "generated": "2026-05-28",
+  "entries": [
+    {"name": "framework.md", "type": "file", "description": "Architectural constitution — service contracts, naming, data ownership, compliance"},
+    {"name": "logic_mandates.md", "type": "file", "description": "Operational protocols — Query System, Thread Management, Memory Protocols"},
+    {"name": "machines_registry.json", "type": "file", "description": "Authoritative machine registry for every node in the fleet"},
+    {"name": "agent_registry.json", "type": "file", "description": "Canonical agent catalog — all agents, versions, machine assignments"},
+    {"name": "service_registry.json", "type": "file", "description": "Service registry — what is running where, ports, health endpoints"},
+    {"name": "{PROJECT_NAME}_project_dictionary.json", "type": "file", "description": "Project glossary — shared vocabulary for terms and conventions"},
+    {"name": "compliance_checker_template.md", "type": "file", "description": "Pre-build compliance checklist template"},
+    {"name": "event_bus_template.md", "type": "file", "description": "Event bus scaffold template"},
+    {"name": "lifecycle_manager_template.md", "type": "file", "description": "Lifecycle manager scaffold template"},
+    {"name": "registries.md", "type": "file", "description": "Registries index — stub, in progress"},
+    {"name": "event_dispatcher.md", "type": "file", "description": "Event dispatcher document — stub, in progress"},
+    {"name": "{PROJECT_NAME}_project_dictionary.md", "type": "file", "description": "Project dictionary markdown version — stub, in progress"},
+    {"name": "network_manifesto.md", "type": "file", "description": "Network manifesto — stub, in progress"}
+  ]
+}

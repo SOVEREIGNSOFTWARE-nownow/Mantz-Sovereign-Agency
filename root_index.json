@@ -1,0 +1,55 @@
+{
+  "project": "{PROJECT_NAME}",
+  "version": "v1.0-public",
+  "codename": "SOVEREIGN_AGENCY",
+  "root_path": "[absolute_project_root_path_set_in_CLAUDE.md]",
+  "generated": "{DATE}",
+  "agent": "Main Agent ({AGENT_NAME})",
+  "auditor": "The Auditor (Layer 2)",
+  "prime_user": "{PRIME_USER_NAME}",
+  "active_node": "{PRIMARY_NODE_NAME}",
+
+  "description": "The {PROJECT_NAME} is a sovereign AI workspace. This index is the master orientation map for the agent active state.",
+
+  "boot_chain": [
+    {
+      "step": 1,
+      "file": "CLAUDE.md",
+      "location": "node-specific — e.[node_name]/.claude/CLAUDE.md",
+      "purpose": "System-level boot configuration"
+    },
+    {
+      "step": 2,
+      "file": "agent_consciousness.md",
+      "location": "2_AGENT_DEFINITIONS/Main_Agent/agent_consciousness.md",
+      "purpose": "Primary identity boot"
+    },
+    {
+      "step": 3,
+      "file": "entities_boot.json",
+      "location": "2_AGENT_DEFINITIONS/Main_Agent/entities_boot.json",
+      "purpose": "Bootstrap entity index"
+    },
+    {
+      "step": 4,
+      "file": "logic_mandates.md",
+      "location": "1_OPERATING_DOCUMENTATION/logic_mandates.md",
+      "purpose": "Behavioral governance"
+    },
+    {
+      "step": 5,
+      "file": "activeContext.md",
+      "location": "3_MEMORY_SYSTEMS/Project_Context_Protocol/activeContext.md",
+      "purpose": "Current session context"
+    }
+  ],
+
+  "pillars": {
+    "1_OPERATING_DOCUMENTATION": "Governance and architectural specs",
+    "2_AGENT_DEFINITIONS": "Agent identity and node configurations",
+    "3_MEMORY_SYSTEMS": "Persistent memory and thread management",
+    "4_SHARED_RESOURCES": "Tooling, APIs, and knowledge resources",
+    "5_THE_VAULT": "Private and sensitive data storage",
+    "6_USER_MANUAL": "Operational procedures and guides"
+  }
+}

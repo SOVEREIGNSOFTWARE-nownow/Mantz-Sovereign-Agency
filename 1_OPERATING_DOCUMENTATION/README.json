@@ -1,0 +1,22 @@
+{
+  "title": "Operating Documentation",
+  "path": "SOVEREIGN_AGENCY/1_OPERATING_DOCUMENTATION",
+  "purpose": "This is the directory containing all governing documentation pertaining to how agents operate within this environment combined with how the environment receives new additions and expands appropriately without fragmenting as those expansions happen.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "framework.md", "description": "The architectural constitution — service contracts, communication standards, naming conventions, data ownership map, event routing, compliance checklist"},
+    {"name": "logic_mandates.md", "description": "Operational protocols — Query System, Thread Management, Memory Protocols; governs per-prompt agent behavior"},
+    {"name": "machines_registry.json", "description": "Authoritative machine registry — hardware specs, network info, SSH config, role, and status for every node in the fleet"},
+    {"name": "agent_registry.json", "description": "Canonical agent catalog — machine assignment, autonomy level, version, status, launch command, memory graph paths"},
+    {"name": "service_registry.json", "description": "Service registry — what is running where, ports, health endpoints, process type, and status"},
+    {"name": "{PROJECT_NAME}_project_dictionary.json", "description": "Project glossary — shared vocabulary for terms, conventions, and concepts used across the system"},
+    {"name": "compliance_checker_template.md", "description": "Pre-build checklist template — 10 questions to answer before writing any new component"},
+    {"name": "event_bus_template.md", "description": "Event bus scaffold — event envelope format, type registry, subscriber registry, dispatcher config"},
+    {"name": "lifecycle_manager_template.md", "description": "Lifecycle manager scaffold — launch_all.sh template, health check table, restart procedure"},
+    {"name": "registries.md", "description": "Registries index — stub, in progress"},
+    {"name": "event_dispatcher.md", "description": "Event dispatcher — stub, in progress"},
+    {"name": "{PROJECT_NAME}_project_dictionary.md", "description": "Project dictionary markdown version — stub, in progress"},
+    {"name": "network_manifesto.md", "description": "Network manifesto — stub, in progress"}
+  ]
+}

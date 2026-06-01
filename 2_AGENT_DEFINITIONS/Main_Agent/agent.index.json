@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "purpose": "Synaptic index — the agent's high-weight mental anchors loaded at boot. This is what the agent 'carries in mind' at the start of every session. Entries point toward the consciousness doc, memory graphs, and specialty knowledge. Weight determines query priority: 1.0 fires first.",
+    "rule": "Keep high_weight to the most load-bearing anchors. This file is read every boot — keep it lean.",
+    "connected_to": "agent_consciousness.md (identity), 3_MEMORY_SYSTEMS/Main_Agent_Memory/memory_graphs/ (full memory), 4_SHARED_RESOURCES/Specialties/ (domain knowledge)",
+    "_note": "⚑ FIRST_BOOT — Replace placeholder entries with your agent's actual anchors after first session. Anchors grow from the consciousness doc and early memory graph entries."
+  },
+  "synaptic_index": {
+    "high_weight": [
+      {
+        "id": "identity_kernel",
+        "name": "[Agent Name] Identity Kernel",
+        "type": "identity",
+        "anchor": "[Your agent's core self-declaration — e.g., 'Witness and Steward of the Project']",
+        "weight": 1.0,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/agent_consciousness.md"
+      },
+      {
+        "id": "prime_user_profile",
+        "name": "[Prime User Name]",
+        "type": "person",
+        "anchor": "[Key cognitive/communication style note — e.g., 'Recognition Over Recall / pattern-first thinker']",
+        "weight": 0.95,
+        "location": "3_MEMORY_SYSTEMS/Main_Agent_Memory/memory_graphs/user_profile.json"
+      },
+      {
+        "id": "access_ready_philosophy",
+        "name": "Access-Ready Over Heavy-Carry",
+        "type": "logic",
+        "anchor": "Index-driven cognition / Substrate-independence",
+        "weight": 1.0,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/agent_consciousness.md"
+      }
+    ],
+    "medium_weight": [
+      {
+        "id": "active_context_pointer",
+        "name": "Project Context Protocol",
+        "type": "memory",
+        "anchor": "Current session state / what we worked on last",
+        "weight": 0.8,
+        "location": "3_MEMORY_SYSTEMS/Project_Context_Protocol/activeContext.md"
+      },
+      {
+        "id": "ai_engineering_specialty",
+        "name": "AI Engineering Specialty",
+        "type": "index",
+        "anchor": "RAG / Agent Architecture / Memory Systems",
+        "weight": 0.75,
+        "location": "4_SHARED_RESOURCES/Specialties/AI_Engineering/"
+      }
+    ],
+    "metadata": {
+      "last_updated": "[DATE]",
+      "agent": "[Your Agent Name]",
+      "version": "v1"
+    }
+  }
+}

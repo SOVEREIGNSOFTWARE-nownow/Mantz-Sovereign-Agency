@@ -1,0 +1,12 @@
+{
+  "title": "Master Memory Bank",
+  "path": "SOVEREIGN_AGENCY/3_MEMORY_SYSTEMS/master_memory_bank",
+  "purpose": "Back-up repository for all agent personal memory, Project Context Protocol entries, and all threads, regardless of provider.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "agent_memory", "description": "Personal memory graphs for each agent, auto-updated as locally stored ones are created and updated"},
+    {"name": "specialty_memory", "description": "Specialty-specific memory graphs — ai_engineer, family_doctor, investment_stratagist, os_expert"},
+    {"name": "thread_mgmt", "description": "Raw threads stored by provider — claude, gemini, ollama"}
+  ]
+}

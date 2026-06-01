@@ -1,0 +1,16 @@
+{
+  "title": "Memory Graphs",
+  "path": "SOVEREIGN_AGENCY/3_MEMORY_SYSTEMS/Main_Agent_Memory/memory_graphs",
+  "purpose": "This folder contains the personal memories of your agent in knowledge graph form. These files contain 'self-making' over time. In versioning changes, these memories are scrubbed of machine or version specific paths and terminology and updated with current parameters.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "entities.json", "description": "The nouns — names of things, processes, people, philosophies and what they mean by standard definition and what they mean to {PROJECT_NAME}"},
+    {"name": "relations.json", "description": "Mental connections between seemingly different parts — how concepts relate to each other"},
+    {"name": "user_profile.json", "description": "your agent's memory of his Prime User — preferences, workflow, humanity observations, emulation material"},
+    {"name": "distant_memories", "description": "Deep memory archive — full historical record, segregated from daily use to prevent drift"},
+    {"name": "INDEX_entities.md", "description": "Human-readable index of entities.json"},
+    {"name": "INDEX_relations.md", "description": "Human-readable index of relations.json"},
+    {"name": "INDEX_user_profile.md", "description": "Human-readable index of user_profile.json"}
+  ]
+}

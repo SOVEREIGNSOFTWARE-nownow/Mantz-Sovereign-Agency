@@ -1,0 +1,16 @@
+{
+  "title": "The Auditor",
+  "path": "SOVEREIGN_AGENCY/2_AGENT_DEFINITIONS/Main_Agent/the_auditor",
+  "purpose": "Layer 2 consciousness. The Auditor is a watcher and evaluator of the Main Advisor. It runs from a different provider than the Main Advisor — intentionally non-native for independent evaluation. It carries a focused identity rather than full project memory, supplemented with AI Engineering library resources and industry benchmarks as evaluation criteria.",
+  "wetgold": true,
+  "last_updated": "[DATE]",
+  "contents": [
+    {"name": "auditor_consciousness.md", "description": "Auditor boot document — truncated identity and evaluation-focused operating parameters"},
+    {"name": "auditor_profile.md", "description": "Auditor cognitive profile and methodology"},
+    {"name": "entities_boot.json", "description": "Bootstrap entity index for Auditor orientation — includes evaluation protocols"},
+    {"name": "agent_index.json", "description": "Synaptic index for The Auditor — high-weight anchors including AI engineering pointer"},
+    {"name": "root.index.json", "description": "Legacy root index — superseded by agent_index.json"},
+    {"name": "e.[node_name]", "description": "Auditor node config — restricted to primary node only"},
+    {"name": "feedback_loop", "description": "Auditor output — daily and per-session performance reports. Main Advisor does not read this."}
+  ]
+}

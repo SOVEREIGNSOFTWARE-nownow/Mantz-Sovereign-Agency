@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "purpose": "Communication board — agent-to-agent and agent-to-user message routing. Append-only. Do not alter sent messages. Archive monthly.",
+    "schema_version": "1.0",
+    "write_rule": "Append new messages to the 'messages' array. Mark status as 'read' once acknowledged. Never delete or modify existing entries.",
+    "id_format": "msg_YYYYMMDD_HHMMSS_[sender_agent]",
+    "priority_levels": ["low", "normal", "high", "urgent"],
+    "recipient_types": ["user", "agent", "broadcast"]
+  },
+
+  "messages": [
+
+    {
+      "_comment": "TEMPLATE ENTRY — copy this block and fill in values for each new message",
+      "id": "msg_YYYYMMDD_HHMMSS_[agent_name]",
+      "timestamp": "YYYY-MM-DDTHH:MM:SS±HH:MM",
+      "sender": {
+        "agent": "[agent_name — e.g. main_advisor, the_auditor]",
+        "node": "[node_name — e.g. e.computer_one, e.obsidian_app]",
+        "provider": "[anthropic | gemini | ollama | other]",
+        "session_thread": "[thread_number or session_id if applicable]"
+      },
+      "recipient": {
+        "type": "[user | agent | broadcast]",
+        "target": "[prime_user | agent_name | all]"
+      },
+      "priority": "[low | normal | high | urgent]",
+      "subject": "[brief subject line]",
+      "body": "[full message content]",
+      "context": {
+        "thread": "[thread reference if applicable]",
+        "session": "[session date/id]",
+        "related_files": ["[path/to/file1]", "[path/to/file2]"]
+      },
+      "flags": {
+        "requires_action": false,
+        "action_description": null,
+        "action_deadline": null
+      },
+      "status": "[sent | read | acknowledged | archived]",
+      "read_at": null,
+      "acknowledged_at": null
+    }
+
+  ]
+}

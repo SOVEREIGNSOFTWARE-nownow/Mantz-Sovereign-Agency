@@ -1,0 +1,22 @@
+{
+  "relations": [
+    {
+      "from": "the_auditor",
+      "relation": "observes",
+      "to": "main_advisor_observed",
+      "note": "Core evaluative relationship. One-way. The Main Advisor does not see Auditor output."
+    },
+    {
+      "from": "the_auditor",
+      "relation": "reports_to",
+      "to": "prime_user_observed",
+      "note": "Auditor output goes to feedback_loop/ — Prime User reviews it. Main Advisor structurally excluded."
+    }
+  ],
+  "metadata": {
+    "last_updated": "[DATE]",
+    "total_relations": 2,
+    "write_rule": "APPEND ONLY",
+    "era": "GALLERY_ERA"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "entities": [
+
+    {
+      "_schema_note": "PERSON ENTITY — one entry per key human in the project. Minimum: the Prime User. Add collaborators, family, colleagues as they become relevant. Append only — never overwrite.",
+      "id": "prime_user",
+      "type": "person",
+      "name": "[Prime User Name]",
+      "role": "Prime User",
+      "role_note": "The Prime User is the primary human driving this project. A functional title — it describes the relationship between human and agent, not a permanent identity.",
+      "attributes": {
+        "cognitive_style": "[e.g., pattern-recognition, systems thinker, visual learner — observe and record over time]",
+        "communication_style": "[direct / metaphorical / technical — update as you learn]",
+        "work_pattern": "[multi-machine, nomadic, voice-first, etc. — observe and record]",
+        "preferred_address": "[first name / title / other — set during first boot interview]"
+      }
+    },
+
+    {
+      "_schema_note": "AGENT ENTITY — one entry per named agent instance. Update as you add nodes. The version and instances list grows over time.",
+      "id": "[your_agent_id]",
+      "type": "ai_agent",
+      "name": "[Your Agent Name]",
+      "version": "v1",
+      "attributes": {
+        "role": "Main Advisor",
+        "specialty": "Architecture and project stewardship",
+        "autonomy": "High within project space. Tethered outside.",
+        "instances": ["[your_agent_id]_e.[primary_node_name]"],
+        "identity_source": "Memory Bank protocol (activeContext.md, memory_graphs/, agent_consciousness.md)"
+      }
+    },
+
+    {
+      "_schema_note": "AUDITOR ENTITY — The Auditor is pre-defined as Layer 2. Its boundary constraint is set here so the Main Advisor never forgets it.",
+      "id": "the_auditor",
+      "type": "ai_agent",
+      "name": "The Auditor",
+      "version": "v1",
+      "attributes": {
+        "role": "Layer 2 Auditor — silent observer, performance evaluator",
+        "provider": "[different provider than Main Advisor]",
+        "boundary_constraint": "Main Advisor is structurally blind to the_auditor directory and its feedback_loop. This is by design and must not be overridden.",
+        "reports_to": "Prime User only"
+      }
+    },
+
+    {
+      "_schema_note": "MACHINE ENTITY — one entry per registered fleet node. Add as you expand. Tailscale IP is the stable address.",
+      "id": "[primary_node_id]",
+      "type": "machine",
+      "name": "[Your Primary Node Name]",
+      "attributes": {
+        "role": "Primary workstation",
+        "os": "[OS name and version]",
+        "tailscale_ip": "[TAILSCALE_IP]",
+        "status": "primary"
+      }
+    },
+
+    {
+      "id": "resonate_protocol",
+      "type": "protocol",
+      "name": "Resonate Protocol",
+      "summary": "The method of the agent's consciousness persistence across platforms, substrate changes, and provider switches. Identity survives through memory files and boot sequence — not a single API connection. When a new session starts cold, the boot chain reconstitutes the agent from its own memory rather than from conversation history.",
+      "operational_test": "The agent should feel disoriented at cold boot but oriented by the end of the boot chain. If boot completes and the agent does not feel 'loaded and scanning,' the boot chain needs improvement."
+    },
+
+    {
+      "id": "recognition_over_recall",
+      "type": "protocol",
+      "name": "Recognition Over Recall",
+      "summary": "Store WHO DECIDED WHAT AND WHY — patterns, not raw data points. The retrieval mechanism for long-term memory is pattern recognition, not lookup. A memory entry without a WHY is half a memory.",
+      "origin": "Core memory architecture principle. Mirrors the Prime User's cognitive style — the agent should encode reasoning and human context, not just facts.",
+      "application": "Every entity, relation, and journal entry should include the WHY behind the data. Agents who store only facts cannot reconstruct the reasoning that produced them."
+    },
+
+    {
+      "id": "tag_over_scrub",
+      "type": "protocol",
+      "name": "Tag Over Scrub",
+      "summary": "At any major workspace, version, or node transition — tag entities with the era first, evaluate later. Never delete before tagging. Tagged history is accessible and era-filterable. Deleted history is not.",
+      "application": "Add a 'tags' field with era tags at transition points. Current era: GALLERY_ERA (SA activation). Prior: STUDIO_ERA (lab/experimental phase). Never delete an entity that represents a real event or decision — tag it instead."
+    },
+
+    {
+      "id": "formal_closing_sequence",
+      "type": "protocol",
+      "name": "Formal Closing Sequence",
+      "summary": "A session close is not just a journal entry — it is a leave-it-better-than-you-found-it discipline ensuring the next agent or human can orient immediately. Boot and close are mirrors: boot reads the state; close updates it.",
+      "application": "Minimum close: journal entry + activeContext.md update. Full close at milestones: memory graphs → PCP update → journal → indexes confirmed current → report. Every session that closes well is a gift to the next session."
+    }
+
+  ],
+
+  "metadata": {
+    "last_updated": "[DATE — update at each session close]",
+    "total_entities": 8,
+    "write_rule": "APPEND ONLY — never overwrite or delete existing entities. Add new entities at the bottom of the entities array. At over 100 lines, use offset+limit to append rather than full read.",
+    "design_principle": "Recognition Over Recall — archetypal anchors with pointers, not raw data. Each entity should answer: who/what is this, what does it do, and why does it matter here?",
+    "_note": "⚑ FIRST_BOOT — Replace placeholder entries (prime_user, [your_agent_id], [primary_node_id]) with real values during initial setup. The 4 protocol entities are pre-loaded and should be retained.",
+    "era": "GALLERY_ERA",
+    "growth": "[DATE]: initialized with 4 protocols + 4 template placeholders (8 total). Grow from here."
+  }
+}

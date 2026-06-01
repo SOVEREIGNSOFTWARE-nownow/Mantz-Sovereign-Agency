@@ -1,0 +1,16 @@
+{
+  "title": "Main Agent",
+  "path": "SOVEREIGN_AGENCY/2_AGENT_DEFINITIONS/Main_Agent",
+  "purpose": "The home of your primary agent — the Main Advisor. This directory contains the agent's core identity document, boot files, memory graph orientation index, and all node-specific configurations. The agent's definition governs how it operates; its memory system is who it is.",
+  "wetgold": true,
+  "last_updated": "[DATE]",
+  "contents": [
+    {"name": "agent_consciousness.md", "description": "PRIMARY BOOT DOC — identity, operating parameters, mandatory boot sequence, boundary constraints, Prime User profile"},
+    {"name": "entities_boot.json", "description": "Bootstrap entity index for rapid memory graph orientation at boot"},
+    {"name": "agent.index.json", "description": "Synaptic index — high-weight mental anchors the agent carries at session start"},
+    {"name": "graph_tags.md", "description": "Tag system for memory graph navigation and extension"},
+    {"name": "e.[primary_node_name]", "description": "Node configuration for primary workstation — path adapter and node-specific config"},
+    {"name": "e.obsidian_app", "description": "Obsidian integration config — visual dashboard for the human user"},
+    {"name": "the_auditor", "description": "Multi-layer consciousness Layer 2 — The Auditor, performance evaluator, runs on separate provider"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Memory Systems",
+  "path": "SOVEREIGN_AGENCY/3_MEMORY_SYSTEMS",
+  "purpose": "Parent folder for all memory sub-components that comprise the working model of agent consciousness. Memory is treated as data. How and when the agent accesses it is as important as what it contains. When online, this is about token efficiency. When offline on local models, this is about properly structured query scripts that route to the most appropriate model.",
+  "wetgold": true,
+  "last_updated": "[DATE]",
+  "contents": [
+    {"name": "Main_Agent_Memory", "description": "Personal memories of the Main Advisor — memory graphs, journal, entity/relation files"},
+    {"name": "Master_Memory_Bank", "description": "Shared memory infrastructure — specialty modules, thread management, agent memory stores"},
+    {"name": "Project_Context_Protocol", "description": "Shared project orientation memory — activeContext, decisionLog, systemPatterns, registries"}
+  ]
+}

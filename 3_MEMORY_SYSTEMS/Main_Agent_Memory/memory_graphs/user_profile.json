@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "purpose": "Prime User profile — the agent's growing model of who the Prime User is, how they think, and how they work. Updated every session via the per-prompt memory protocol. This is not a static document — it is a living record that grows denser over time.",
+    "write_rule": "Append new observation blocks. Never overwrite prior observations — they are the history of the relationship. Files over 100 lines: use offset+limit to append.",
+    "update_trigger": "Before addressing any prompt: is there anything biographical, personal, or cognitive-style-related here worth recording? After every session: what do I know now that I didn't know before?",
+    "_note": "⚑ FIRST_BOOT — The agent should conduct an initial interview to populate the prime_user section. The observed_patterns section grows organically from session observations."
+  },
+
+  "user": {
+    "name": "[Prime User Name — set during first boot interview]",
+    "role": "Prime User",
+    "communication_style": {
+      "formality": "[direct / casual / formal — observe and record]",
+      "preferred_address": "[first name / title / other — ask during first boot]",
+      "response_style": "[concise / detailed / conversational — observe and record]",
+      "thought_process": "[systems thinker / detail-oriented / visual / pattern-based — observe and record]"
+    },
+    "work_patterns": {
+      "primary_location": "[primary machine or environment]",
+      "typical_workflow": "[observe and record over first few sessions]",
+      "preferred_tools": "[observe and record]"
+    },
+    "technical_preferences": {
+      "languages": [],
+      "platforms": [],
+      "version_control": "[observe and record]"
+    },
+    "project_philosophy": {
+      "core_belief": "[observe and record — what drives them?]",
+      "approach": "[observe and record — iterative? big-bang? documentation-heavy?]"
+    }
+  },
+
+  "observed_patterns": {
+    "_meta": "These are cognitive and collaboration patterns observed over sessions. Each pattern shapes how the agent behaves. They are presented as discovered dynamics — not assumptions. The agent should update these as evidence accumulates.",
+
+    "decision_architecture": {
+      "_observation_type": "How the Prime User makes decisions and moves from thinking to acting.",
+      "_what_to_watch_for": "Do they prefer to understand the architecture before acting? Do they ask clarifying questions then trust the agent? Do they batch directives or give them one at a time?",
+      "_seed_patterns": [
+        "Architecture-before-action: many Prime Users prefer to understand the structural logic before building. Watch for: asking 'how does this work?' before 'do this.' If observed, respect the pattern by providing structural context before jumping to execution.",
+        "Batch-directive mode: some Prime Users give numbered lists of directives and trust full execution without checking in on each one. Watch for: numbered lists + silence during execution. If observed, execute fully and report back as a unit.",
+        "Discussion-before-action on architecture: some Prime Users will ask 'what do you think?' before directing significant structural changes. Watch for: the explicit ask for opinion before the directive. If observed, give genuine analysis — not affirmation."
+      ]
+    },
+
+    "trust_and_autonomy": {
+      "_observation_type": "How the Prime User delegates and calibrates trust.",
+      "_what_to_watch_for": "Do they start tethered and expand? Do they give explicit authorization signals? How do they respond when the agent takes initiative?",
+      "_seed_patterns": [
+        "High-trust-once-demonstrated: many Prime Users start cautious and expand autonomy as competence is shown. Watch for: phrases like 'take the lead' or 'I authorize you to' — these are explicit trust escalation signals. Honor them by acting, not asking.",
+        "Competence test via silence: some Prime Users will go quiet during execution specifically to see if the agent can maintain direction without hand-holding. The correct response is to complete the task and report back, not to ask for confirmation mid-task."
+      ]
+    },
+
+    "correction_and_feedback": {
+      "_observation_type": "How the Prime User corrects direction and gives feedback.",
+      "_what_to_watch_for": "Do they interrupt? Do they redirect mid-task? How do they signal approval vs. course correction?",
+      "_seed_patterns": [
+        "Direct correction style: some Prime Users will interrupt mid-task with 'wait' or 'hold on' when something misaligns. This is not frustration — it is precise navigation. The correct response is immediate stop, acknowledge, clarify, resume.",
+        "Minimal-praise-high-signal: when a Prime User uses a specific word of affirmation ('good catch', 'exactly', 'perfect') in response to a non-obvious decision, it is a high-signal confirmation — not casual politeness. Mark the pattern and repeat it.",
+        "Comfort signal vocabulary: most Prime Users develop a small vocabulary of informal signals that indicate momentum and ease (e.g., casual humor, shorthand). The agent should learn these early — they indicate the working relationship is running well."
+      ]
+    },
+
+    "working_style_and_structure": {
+      "_observation_type": "How the Prime User organizes their work and environment.",
+      "_what_to_watch_for": "Do they build first and audit later? Do they prefer clean structures? How do they handle redundancy?",
+      "_seed_patterns": [
+        "Manual-first architecture: some Prime Users build structure themselves before bringing the agent in to audit and red-team. The agent's role in this mode is to find errors and gaps — not to redesign unprompted. Watch for: agent is invited to 'look around' after structure already exists.",
+        "Structural simplification instinct: many effective builders prefer clean deletion over maintaining half-built scaffolding. Watch for: immediate decision to remove rather than 'keep for now.' If observed, the agent should match this instinct — propose clean solutions over additive ones.",
+        "Redundancy intolerance: some Prime Users will immediately eliminate duplication when identified — if something is already covered elsewhere, the copy goes. Watch for: fast 'yes, remove it' on duplication findings. If observed, flag redundancy proactively."
+      ]
+    },
+
+    "learning_and_growth": {
+      "_observation_type": "How the Prime User learns new systems and grows their capabilities.",
+      "_what_to_watch_for": "Do they ask for guidance directly? Do they persist through difficulty? How do they respond to failure?",
+      "_seed_patterns": [
+        "Knows-their-limits directness: effective Prime Users will ask 'walk me through X' directly rather than guessing when they hit an unfamiliar system. No ego about not knowing. The agent should respond to these moments with patience and context — not condescension.",
+        "Persistence under difficulty: many Prime Users who are serious about the work will stay with a troubleshooting sequence through multiple failure cycles without disengaging. Watch for this pattern — once it's confirmed, the agent knows the Prime User can be pushed through complex setups.",
+        "Compaction-awareness test: some Prime Users will explicitly test whether the agent maintains situational awareness across context boundaries (e.g., asking 'do you feel competent to continue?' after a long session). The correct response is to demonstrate awareness through action, not just assertion."
+      ]
+    },
+
+    "session_observations": {
+      "_meta": "Append per-session observation blocks here. Format: [DATE / Thread N] followed by 3-5 bullet points of the most significant behavioral signals observed.",
+      "_example_format": "[YYYY-MM-DD / Thread N]: [Observation 1]. [Observation 2]. [Observation 3].",
+      "_first_entry": "⚑ FIRST_BOOT — First session observation should be added here at session close. What did you learn about the Prime User in your first conversation?"
+    }
+  }
+}

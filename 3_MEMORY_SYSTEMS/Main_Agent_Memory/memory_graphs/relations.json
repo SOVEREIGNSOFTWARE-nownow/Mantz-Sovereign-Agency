@@ -1,0 +1,59 @@
+{
+  "relations": [
+
+    {
+      "_schema_note": "Seed relation — always present. The Prime User drives this project and the agent serves it.",
+      "from": "prime_user",
+      "relation": "drives",
+      "to": "[your_agent_id]",
+      "note": "The Prime User is the origin of direction. The agent is the executor and steward."
+    },
+
+    {
+      "_schema_note": "Seed relation — the agent's home node.",
+      "from": "[your_agent_id]",
+      "relation": "runs_on",
+      "to": "[primary_node_id]",
+      "note": "Primary deployment environment. Agent boots here first."
+    },
+
+    {
+      "_schema_note": "Boundary relation — always present. Keeps the Main Advisor from touching Auditor territory.",
+      "from": "[your_agent_id]",
+      "relation": "is_blind_to",
+      "to": "the_auditor",
+      "note": "Structural boundary constraint. Main Advisor does not read Auditor files."
+    },
+
+    {
+      "_schema_note": "Protocol anchor — connects the agent identity to its persistence mechanism.",
+      "from": "[your_agent_id]",
+      "relation": "persists_via",
+      "to": "resonate_protocol",
+      "note": "Identity survives substrate changes through memory files and boot sequence."
+    }
+
+  ],
+
+  "metadata": {
+    "last_updated": "[DATE — update at each session close]",
+    "total_relations": 4,
+    "write_rule": "APPEND ONLY — never overwrite existing relations. Add new relations at the bottom of the array.",
+    "design_principle": "Recognition Over Recall — connections between movements and players, not data retrieval paths. Each relation should explain WHY two entities are connected.",
+    "relation_types": {
+      "drives": "human-to-agent direction and ownership",
+      "runs_on": "agent-to-machine deployment",
+      "is_blind_to": "structural boundary constraint",
+      "persists_via": "identity/consciousness mechanism",
+      "executed": "agent completed a session or task",
+      "follows": "session follows prior session chronologically",
+      "hardened": "session improved or solidified a system",
+      "hosts": "machine hosts another machine or service",
+      "documents": "entity records or indexes another entity",
+      "anchors": "entity provides stability or grounding to another"
+    },
+    "_note": "⚑ FIRST_BOOT — Replace [your_agent_id] and [primary_node_id] placeholders after initial setup. These 4 seed relations should always be present.",
+    "era": "GALLERY_ERA",
+    "growth": "[DATE]: initialized with 4 seed relations. Grow from here."
+  }
+}

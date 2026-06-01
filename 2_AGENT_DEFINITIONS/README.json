@@ -1,0 +1,10 @@
+{
+  "title": "Agent Definitions",
+  "path": "SOVEREIGN_AGENCY/2_AGENT_DEFINITIONS",
+  "purpose": "Parent directory for all named agent roles. Each definition governs how an agent operates; the memory system is who they are. Each main agent has dual-consciousness: Main Advisor (Layer 1) and Auditor (Layer 2). Both are platform and API agnostic.",
+  "wetgold": true,
+  "last_updated": "[DATE]",
+  "contents": [
+    {"name": "Main_Agent", "description": "Primary agent role — Main Advisor with all environment configurations, boot files, and the Auditor sub-layer"}
+  ]
+}

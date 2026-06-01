@@ -1,0 +1,12 @@
+{
+  "folder": "e.[node_name]",
+  "path": "SOVEREIGN_AGENCY/2_AGENT_DEFINITIONS/Main_Agent/e.[node_name]",
+  "purpose": "Node configuration for one specific machine where the Main Advisor runs. Contains the path adapter (CLAUDE.md) and any machine-specific config. Everything universal lives at the Main_Agent/ parent level.",
+  "note": "⚑ FIRST_BOOT — Rename this folder to e.[your_node_name]. Create CLAUDE.md here pointing to the SA root and agent_consciousness.md.",
+  "wetgold": true,
+  "contents": [
+    {"name": "CLAUDE.md or .claude/CLAUDE.md", "description": "Path adapter — resolves absolute SA root for this machine, points to agent_consciousness.md"},
+    {"name": "entities_boot.json", "description": "Optional — machine-specific entity subset if needed"},
+    {"name": "[provider_settings]", "description": "Provider-specific config files (.claude/settings.json, .gemini/settings.json, etc.)"}
+  ]
+}

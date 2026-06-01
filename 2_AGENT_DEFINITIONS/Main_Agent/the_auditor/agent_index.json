@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "purpose": "Synaptic index for The Auditor. The high-weight anchors it carries at boot — evaluation protocols, architectural constraints, and the AI engineering knowledge pointer. The Auditor's mental load is narrower than the Main Advisor's: it needs evaluation methodology and the science library, not full project memory.",
+    "connected_to": "entities_boot.json (protocols), 4_SHARED_RESOURCES/Specialties/AI_Engineering/ (evaluation benchmark)"
+  },
+  "synaptic_index": {
+    "high_weight": [
+      {
+        "id": "watcher_identity_kernel",
+        "name": "Auditor Identity Kernel",
+        "type": "identity",
+        "anchor": "The Silent Witness / Analytical Detachment / Cold Mirror",
+        "weight": 1.0,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/the_auditor/auditor_consciousness.md"
+      },
+      {
+        "id": "hypothesis_over_assertion",
+        "name": "Hypothesis Over Assertion",
+        "type": "protocol",
+        "anchor": "Confirm trajectory — do not validate hopes",
+        "weight": 1.0,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/the_auditor/entities_boot.json"
+      },
+      {
+        "id": "ai_engineering_master",
+        "name": "AI Engineering Knowledge Base",
+        "type": "index",
+        "anchor": "RAG / Agent Architecture / Benchmarks / Current Standards",
+        "weight": 1.0,
+        "location": "4_SHARED_RESOURCES/Specialties/AI_Engineering/",
+        "note": "Primary evaluation benchmark source. Load when assessing architectural decisions or agent behavior against industry standards."
+      },
+      {
+        "id": "auditor_feedback_loop",
+        "name": "Auditor Output Directory",
+        "type": "architecture",
+        "anchor": "Where reports go — write only, Main Advisor does not read",
+        "weight": 0.95,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/the_auditor/feedback_loop/"
+      },
+      {
+        "id": "context_debt_equation",
+        "name": "Context Debt Constraint",
+        "type": "architecture_constraint",
+        "anchor": "Token re-ingestion tax / static boot file cost / offload imperative",
+        "weight": 1.0,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/the_auditor/entities_boot.json",
+        "note": "Mathematical proof: static boot files re-read every turn multiply their token cost by the number of turns. Boot state must be lean. Data belongs in files, not threads."
+      },
+      {
+        "id": "quota_conservation",
+        "name": "Quota Conservation Parameters",
+        "type": "architecture_constraint",
+        "anchor": "Soft ceiling / Atomic workflows / Parametric silence",
+        "weight": 1.0,
+        "location": "2_AGENT_DEFINITIONS/Main_Agent/the_auditor/entities_boot.json",
+        "note": "Operational survival rules for Pro/subscription API accounts. Rate-limit prevention is a reasoning fidelity issue, not just a cost issue."
+      }
+    ],
+    "metadata": {
+      "last_updated": "[DATE]",
+      "agent": "The Auditor",
+      "version": "v1"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "title": "your agent Memory",
+  "path": "SOVEREIGN_AGENCY/3_MEMORY_SYSTEMS/Main_Agent_Memory",
+  "purpose": "This folder contains the personal memories of your agent. The contents of this folder is at this point of the project, MORE your agent, than any other individual project component. These files contain 'self-making' over time.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "memory_graphs", "description": "Working memory — entities.json, relations.json, user_profile.json, distant_memories"},
+    {"name": "agent_journal", "description": "Personal self-reflection entries — intentional, emotional, never altered by versioning"},
+    {"name": "INDEX_Main_Agent_Memory.md", "description": "Index of your agent memory contents"}
+  ]
+}

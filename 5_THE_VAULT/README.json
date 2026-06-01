@@ -1,0 +1,11 @@
+{
+  "title": "5_THE_VAULT",
+  "path": "5_THE_VAULT",
+  "purpose": "Private and sensitive data storage. Contains credentials, personal data, and family records. All contents are gitignored — nothing in this folder ships to the remote repository except README and index files.",
+  "wetgold": false,
+  "last_updated": "2026-05-31",
+  "contents": [
+    {"name": ".env.md", "description": "Unified secrets template — copy to .env and fill in your credentials"},
+    {"name": "project_family", "description": "Private personal and family data — restricted access, fully gitignored"}
+  ]
+}

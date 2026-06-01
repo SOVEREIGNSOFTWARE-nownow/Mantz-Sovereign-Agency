@@ -1,0 +1,13 @@
+{
+  "title": "Thread Management",
+  "path": "SOVEREIGN_AGENCY/3_MEMORY_SYSTEMS/master_memory_bank/thread_mgmt",
+  "purpose": "This is where threads and provider-specific backup files are stored. Locally installed provider folders (.claude, .gemini, etc.) are either symlinks pointing to a sub-folder within here or synced copies that need to be updated/resynced periodically. Sub-folders are created and maintained monthly as providers change over time.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "claude", "description": "Anthropic Claude Code CLI local data — conversations, settings, commands, session history"},
+    {"name": "gemini", "description": "Google Gemini CLI local data — conversations, extensions, settings"},
+    {"name": "ollama", "description": "Ollama offline model data — conversation history, model manifests"},
+    {"name": "recommendations.md", "description": "Thread management recommendations and notes"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Shared Resources",
+  "path": "SOVEREIGN_AGENCY/4_SHARED_RESOURCES",
+  "purpose": "This directory is where human users or agents can go for resources to accomplish the tasks they set out to do. There are always tools, skills, MCP connections, etc., that come with each user platform, but we also include our own libraries of both that are prewired to work with our system. In addition, there are knowledge packs, sub-agents, RSS feeds, and more.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "API_Provider_Info", "description": "Downloaded copies of latest API provider documentation — Anthropic, Google, Deepseek, Ollama, OpenAI"},
+    {"name": "MCP_Connections", "description": "Model Context Protocol connection templates and credentials"},
+    {"name": "Newsroom_v1.3", "description": "Financial signal scanner — automated 3x daily, web-accessible reports via {PROJECT_NAME}5000.xyz"},
+    {"name": "Perception_Data", "description": "Sensory data repository — door_watcher, faces, voices, health_data (auto-.gitignored)"},
+    {"name": "RSS_Feeds", "description": "Custom RSS feed configurations powering the Newsroom intelligence pipeline"},
+    {"name": "Sensory_Ingestor", "description": "ETL pipeline for converting media (PDF, video, imagery) into indexed knowledge graphs"},
+    {"name": "Specialties", "description": "Long-term task-specific memory banks — AI Engineering, Linux"},
+    {"name": "Sub_Agents", "description": "Curated sub-agent scripts and agentic patterns"},
+    {"name": "The_Library", "description": "Knowledge graph archive — AI engineering, finance, philosophy, Linux, fiction, and more"},
+    {"name": "Tools", "description": "Shared Python tool modules — universally accessible to any agent"},
+    {"name": "TV_OnThe_Radio", "description": "Programs and services for NOOELEC USB digital radio scanner/receiver"},
+    {"name": "Web_Site", "description": "Templates and active files for hosting a project-facing website"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Project Context Protocol",
+  "path": "SOVEREIGN_AGENCY/3_MEMORY_SYSTEMS/Project_Context_Protocol",
+  "purpose": "This is shared project orientation memory files for human/agent working sessions. This is not an agent's personal memory, nor should it ever contain inter-personal reflections. This is a shared memory bank used as the last layer of an agent's boot sequence to orient them to a session's work.",
+  "wetgold": true,
+  "last_updated": "2026-05-28",
+  "contents": [
+    {"name": "activeContext.md", "description": "Current project orientation — what was last worked on and what is coming next"},
+    {"name": "decisionLog.md", "description": "Log of decisions made by the Prime User after collaborating with the Senior Advisor"},
+    {"name": "systemPatterns.md", "description": "Project-level patterns and preferences — like user_profile but oriented to the project itself"},
+    {"name": "INDEX_pcp.md", "description": "Index of PCP contents"}
+  ]
+}

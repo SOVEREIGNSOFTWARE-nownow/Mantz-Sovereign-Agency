@@ -1,0 +1,175 @@
+# {PROJECT_NAME} .gitignore
+# Initialized: 2026-05-28
+
+# ============================================
+# 1. SECURITY — HARD LINE
+# No credentials, tokens, passwords, keys
+# ============================================
+.env
+.env.*
+*.env.md
+.env.md
+*.key
+*.pem
+id_rsa*
+id_ed25519*
+*_secret
+*_token
+*.ovpn
+gcp-service-account.json
+**/*service-account*.json
+**/mcp.json
+**/mcp.local.json
+**/.credentials.json
+**/.claude.json.backup.*
+**/sudoers.d/
+nopasswd*
+
+# ============================================
+# 2. THE VAULT — Folder + READMEs tracked, contents blocked
+# ============================================
+# Block all vault contents
+5_THE_VAULT/*
+!5_THE_VAULT/README*
+!5_THE_VAULT/index.*
+
+# project_family — completely restricted, no trace, no mention
+5_THE_VAULT/project_family/
+
+# ============================================
+# 3. LARGE FILES — Size management
+# GitHub hard limit: 100MB per file
+# ============================================
+# Disk images and ISOs (in THE_VAULT, double-blocked)
+*.iso
+*.img
+*.qcow2
+*.vmdk
+*.ova
+*.ovf
+*.box
+*.vbox
+*.vdi
+*.dmg
+
+# KG/vector pipeline outputs — compiled data, often large
+**/chunks/
+**/embeddings/
+**/raw_text/
+**/entities_relations/
+
+# Compiled knowledge graphs — regeneratable, often 50-245MB+
+**/*knowledge_graph*.json
+
+# Ollama model blobs — multi-GB ML weights, never commit
+**/ollama/
+
+# Gemini/agent runtime temp data (both legacy lowercase and current capitalized paths)
+3_MEMORY_SYSTEMS/master_memory_bank/thread_mgmt/gemini/
+3_MEMORY_SYSTEMS/master_memory_bank/thread_mgmt/ollama/
+3_MEMORY_SYSTEMS/Master_Memory_Bank/thread_mgmt/gemini/
+3_MEMORY_SYSTEMS/Master_Memory_Bank/thread_mgmt/ollama/
+
+# Unity project build artifacts — entirely regeneratable, 1.2GB
+2_AGENT_DEFINITIONS/Senior_Advisor/p.main_agent_audio_pipeline/Library/
+
+# Large ML/data binary formats
+*.pkl
+*.bin
+*.h5
+*.hdf5
+*.parquet
+*.arrow
+*.gguf
+*.pt
+*.safetensors
+*.onnx
+*.db
+*.sqlite
+*.sqlite3
+
+# Archive formats
+*.tar.gz
+*.zip
+*.7z
+*.bz2
+*.xz
+
+# ============================================
+# 3b. OBSIDIAN WORKSPACE STATE (device-specific, do not sync)
+# ============================================
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/cache
+.trash/
+
+# ============================================
+# 4. AGENT RUNTIME DATA — Local only
+# ============================================
+# Claude Code CLI — block all runtime data, track only custom commands
+# Root .claude/
+.claude/conversations/
+.claude/cache/
+.claude/statsig/
+.claude/telemetry/
+.claude/paste-cache/
+.claude/file-history/
+.claude/sessions/
+.claude/shell-snapshots/
+.claude/todos/
+.claude/ide/
+.claude/projects/
+.claude/history.jsonl
+.claude/scheduled_tasks.lock
+.claude/plugins/
+# All nested .claude/ dirs (agent nodes) — block everything except commands/
+**/.claude/conversations/
+**/.claude/cache/
+**/.claude/statsig/
+**/.claude/telemetry/
+**/.claude/paste-cache/
+**/.claude/file-history/
+**/.claude/sessions/
+**/.claude/shell-snapshots/
+**/.claude/todos/
+**/.claude/ide/
+**/.claude/projects/
+**/.claude/history.jsonl
+**/.claude/*.lock
+**/.claude/.*
+**/.claude/plugins/
+
+# Agent runtime backups and embedded plugin repos
+**/prime/backups/
+**/watcher/backups/
+**/plugins/superpowers/
+**/plugins/marketplaces/
+**/extensions/superpowers/
+
+# Gemini CLI runtime
+.gemini/
+
+# ============================================
+# 5. ARTIFACT / STAGING FILES
+# ============================================
+\#\#*
+\#\#*/
+**/\#\#*
+**/\#\#*/
+
+# ============================================
+# 6. SYSTEM & IDE TRASH
+# ============================================
+.DS_Store
+._*
+Thumbs.db
+.idea/
+*.swp
+*.swo
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+node_modules/
