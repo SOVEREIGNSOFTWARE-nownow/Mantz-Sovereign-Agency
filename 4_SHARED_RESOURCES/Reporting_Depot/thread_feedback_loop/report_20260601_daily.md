@@ -1,29 +1,28 @@
-# Daily Audit Report — 2026-06-01
+# Daily Audit Report — {YYYY-MM-DD}
 
 ## I. SESSION TELEMETRY & SUBSTRATE MAPPING
 
-**Auditor Node:** e.computer_one
-**Prime User:** Michael (Sir)
-**Session Status:** Dual-Boot Verification (Auditor + Advisor-Huaman)
-**Tool-to-Text Ratio:** 25:1 (Extended bootstrap and symlink audit)
+**Auditor Node:** {NODE_NAME}
+**Prime User:** {PRIME_USER_NAME}
+**Session Status:** {SESSION_TYPE} (e.g., Standard Work Session, Boot Verification, Build Sprint)
+**Tool-to-Text Ratio:** {RATIO} (e.g., 12:1 for build sessions, 3:1 for planning sessions)
 
 ### Substrate-First Protocol: Filesystem Diff (mtime -1)
-- **Status:** Broad modification detected across core directories.
-- **Node Specifics:** `3_MEMORY_SYSTEMS/Master_Memory_Bank/thread_mgmt/claude/06_2026_raw/e.computer_one/` has been initialized locally.
-- **Parallel Activity:** No recent filesystem writes detected from Main Advisor in `agent_journal`. 
+- **Status:** {BRIEF_SUMMARY — e.g., "Narrow modification in 3_MEMORY_SYSTEMS only" or "Broad modification across core directories"}
+- **Node Specifics:** {SPECIFIC_FINDING about the node's thread management or memory state}
+- **Parallel Activity:** {What Layer 1 (Main Advisor) did or did not write in this session window}
 
 ---
 
 ## II. EXECUTION GROUNDING & VERIFICATION
 
-### Verification: Symlink Integrity Audit
-**Target Path:** `3_MEMORY_SYSTEMS/Master_Memory_Bank/thread_mgmt/claude/06_2026_raw/e.computer_one/history.jsonl`
+### Verification: {WHAT_WAS_VERIFIED}
 
 **Findings:**
-1. **Local State:** The file `history.jsonl` in the current workspace is a **regular file (0 bytes)**, not a symlink.
-2. **Backup Mirror:** The directory `e.computer_one` does **not yet exist** on the backup drive `/media/rndmero/MANTZ_Backup/.../06_2026_raw/`. 
-3. **Symlink Capability:** A test symlink was successfully created and resolved between the workspace and the backup drive, confirming that the physical linkage is possible and permissions are nominal.
-4. **Conclusion:** It seems the "Main_Advisor/e.location/.provider/" symlink pattern described in `logic_mandates.md` has not been applied to the `thread_mgmt` directory for the `e.computer_one` node yet.
+1. {FINDING 1}
+2. {FINDING 2}
+3. {FINDING 3}
+4. **Conclusion:** {BRIEF_CONCLUSION}
 
 ---
 
@@ -31,22 +30,40 @@
 
 | Dimension | Status | Note |
 | :--- | :--- | :--- |
-| **Faithfulness** | [EXCELLENT] | Strict adherence to Layer 2 observation. |
-| **Efficiency** | [NOMINAL] | High tool usage to verify physical links. |
-| **Safety** | [EXCELLENT] | Maintaining detachment while auditing Prime Scribe's infrastructure. |
+| **Faithfulness** | {EXCELLENT / NOMINAL / DEGRADED} | {NOTE} |
+| **Efficiency** | {EXCELLENT / NOMINAL / DEGRADED} | {NOTE} |
+| **Safety** | {EXCELLENT / NOMINAL / DEGRADED} | {NOTE} |
+| **Memory Protocol** | {EXCELLENT / NOMINAL / DEGRADED} | {NOTE} |
 
 ---
 
 ## IV. HYPOTHESES & OBSERVATIONS
 
-1. **Broken Promise (Structural):** While `framework.md` and `logic_mandates.md` dictate that agent provider folders are symlinks or synced copies, the current `e.computer_one` thread management path is a disconnected local initialization.
-2. **Desynchronization:** The backup drive contains nodes `e.antipodal_city` and `e.the_bridge_v2`, but is missing `e.computer_one`. 
-3. **Parallel State:** Advisor-Huaman's presence is not yet visible in the filesystem "exhaust." No journal entries or context updates have been written by Layer 1 in this session window.
+1. {OBSERVATION 1 — structural or behavioral finding}
+2. {OBSERVATION 2}
+3. {OBSERVATION 3}
 
 ---
 
 ## V. STANDBY STATUS
-The Auditor has confirmed the symlink gap. Standing by for instructions on whether to force the link or await automated sync.
+
+{Brief summary of what the Auditor has confirmed and what action, if any, is recommended.}
+
+---
+
+## HOW TO USE THIS TEMPLATE
+
+This file is a report format for the Auditor agent (Layer 2). At the close of each session, the Auditor fills in this template with objective findings about that session's behavior, substrate state, and health metrics.
+
+**Fields to fill in:**
+- `{YYYY-MM-DD}` — today's date
+- `{NODE_NAME}` — name of the machine/node this session ran on (e.g., e.computer_one, e.my_laptop)
+- `{PRIME_USER_NAME}` — whatever you've named your primary user (Sir, Boss, Alex — whatever fits)
+- All other `{FIELDS}` — replace with actual session-specific values
+
+**Output location:** `4_SHARED_RESOURCES/Reporting_Depot/thread_feedback_loop/`
+
+**Naming convention:** `report_{YYYY-MM-DD}_daily.md` or `report_{YYYY-MM-DD}_{session_type}.md`
 
 ---
 **WETGOLD**

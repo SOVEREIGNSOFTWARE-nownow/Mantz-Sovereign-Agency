@@ -16,6 +16,15 @@
 5_THE_VAULT/                 — Secure/sensitive definitions
 ```
 
+## Agent Boot Sequence
+On every session start, read this file first, then:
+1. `2_AGENT_DEFINITIONS/Main_Agent/agent_consciousness.md`
+2. `1_OPERATING_DOCUMENTATION/logic_mandates.md`
+
+The agent consciousness doc contains a FIRST_BOOT CHECK. If placeholder values are detected in the boot files, the agent will pause normal operation and run the onboarding interview before proceeding. This is expected behavior on first use.
+
+---
+
 ## Version Control Rules for This Repo
 - Commit granularity: one logical change per commit
 - Always run `git status` before committing to avoid staging unintended files

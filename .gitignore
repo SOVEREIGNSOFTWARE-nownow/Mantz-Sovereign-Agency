@@ -20,6 +20,7 @@ gcp-service-account.json
 **/*service-account*.json
 **/mcp.json
 **/mcp.local.json
+**/mcp_settings.json
 **/.credentials.json
 **/.claude.json.backup.*
 **/sudoers.d/
@@ -96,26 +97,13 @@ nopasswd*
 *.xz
 
 # ============================================
-# 3b. OBSIDIAN — block plugins and device state entirely
-# Plugin JS files are third-party binaries (20k-50k lines), not our code
+# 3b. OBSIDIAN WORKSPACE STATE (device-specific, do not sync)
 # ============================================
-.obsidian/plugins/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/graph.json
 .obsidian/cache
 .trash/
-
-# ============================================
-# 3c. AUTOMATED AGENT OUTPUTS — not for public release repo
-# News scans, daily reports, auto-generated logs belong in private repo
-# ============================================
-**/NEWS_ROOM/
-**/*_scan_*.md
-**/*morning_scan*
-**/*midday_scan*
-**/*evening_scan*
-4_SHARED_RESOURCES/Reporting_Depot/thread_feedback_loop/report_*.md
 
 # ============================================
 # 4. AGENT RUNTIME DATA — Local only

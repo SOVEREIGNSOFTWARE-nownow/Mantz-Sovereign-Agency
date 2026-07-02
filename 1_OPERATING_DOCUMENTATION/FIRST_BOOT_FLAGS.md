@@ -244,6 +244,7 @@ After all three sessions, verify:
 - [ ] Boot chain confirmed clean — agent reads itself correctly on cold boot
 - [ ] First journal entry written
 - [ ] `.env` file created and populated (not `.env.md`)
+- [ ] Root `CLAUDE.md` updated — replace the `Account`, `Remote`, and `Git user` lines under **Project Identity** with your own GitHub account and git identity. The defaults point to the Slogun Soft template repo and will cause commits to be attributed incorrectly if not changed.
 
 ---
 

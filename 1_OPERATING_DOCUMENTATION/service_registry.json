@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-05-29",
+  "last_updated": "{DATE}",
   "schema_version": "2.0",
-  "notes": "Canonical service registry for {PROJECT_NAME} v6. Tracks running processes and daemons — not agents (see agent_registry.json). No active services at this time. SA-relative paths throughout.",
+  "notes": "Canonical service registry for {PROJECT_NAME}. Tracks running processes and daemons — not agents (see agent_registry.json). SA-relative paths throughout. One example service included to demonstrate the schema.",
 
   "schema": {
     "id": "unique service identifier — lowercase, underscore-separated",
@@ -23,6 +23,28 @@
     "notes": "anything else worth knowing"
   },
 
-  "services": {}
+  "services": [
+
+    {
+      "id": "morning_brief",
+      "name": "Morning Brief",
+      "description": "Automated morning intelligence report. Scrapes configured RSS feeds, stores articles in a local SQLite database, and generates a markdown brief summarizing overnight activity across configured topic areas.",
+      "machine": "[your_primary_node]",
+      "tailscale_ip": "[your_node_tailscale_ip]",
+      "process_type": "cron",
+      "start_command": "4_SHARED_RESOURCES/Projects/morning_brief/run_brief.sh",
+      "health_endpoint": null,
+      "http_port": null,
+      "status": "design",
+      "events_emitted": ["morning_brief.complete", "morning_brief.error"],
+      "events_consumed": [],
+      "config_path": "4_SHARED_RESOURCES/Projects/morning_brief/config.json",
+      "log_path": "4_SHARED_RESOURCES/Projects/morning_brief/logs/",
+      "version": "1.0",
+      "last_updated": "{DATE}",
+      "notes": "Cron schedule: daily at a configured time. Brief delivered to 4_SHARED_RESOURCES/Projects/morning_brief/briefs/. Configure a notification channel (messaging app, email, etc.) for delivery outside the terminal."
+    }
+
+  ]
 
 }

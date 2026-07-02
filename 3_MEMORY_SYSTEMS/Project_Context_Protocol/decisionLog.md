@@ -16,9 +16,18 @@
 
 ---
 
-#### Decision 1: [Title of Your First Architectural Decision]
+#### Decision 1: File-Based Memory Over Database Storage
+**[YYYY-MM-DD] | Prime User + Main Agent**
+- **Context:** Early architecture phase. Needed to choose where agent memory graphs live — a dedicated database (SQLite, Postgres) or plain-text files (JSON, Markdown).
+- **Decision:** Plain-text files. JSON for structured memory graphs, Markdown for human-readable content. No database dependency.
+- **Rationale:** Files are readable by humans without tooling, readable and writable by LLMs natively, portable across machines, diffable in git, and survivable across provider changes. A database requires a running process. A plain JSON file requires nothing but an editor. Core principle: the memory must still be legible years from now regardless of what software exists.
+- **Impact:** All memory graphs are `.json` files. All project context is `.md` files. Both tracked in git. No migration scripts needed. New providers and agents can be onboarded by reading files.
+
+---
+
+#### Decision 2: [Title of Your Next Architectural Decision]
 **[YYYY-MM-DD] | [Agent or Prime User]**
-- **Context:** ⚑ FIRST_BOOT — Add your first architectural decision here. Example: which provider to use, how to structure your first node, naming conventions chosen.
+- **Context:** ⚑ Add decisions here as they arise. What was the situation?
 - **Decision:** [What was decided]
 - **Rationale:** [Why — include alternatives considered]
 - **Impact:** [What changed as a result]
